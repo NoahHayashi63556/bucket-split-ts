@@ -1,0 +1,17 @@
+{
+  "name": "bucket-split-ts",
+  "version": "0.1.0",
+  "description": "Maps subject strings to fixed buckets by hash, optionally with weights.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
