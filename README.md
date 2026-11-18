@@ -53,3 +53,10 @@ used for anything security-sensitive.
 - `bucketOf(subject: string, buckets: number): number` — bucket index in `[0, buckets)`. `buckets` must be a positive integer.
 - `assign(subject: string, weights: number[]): number` — weighted bucket index. Weights must be finite, non-negative, non-empty, and sum to a positive value.
 - `validateWeights(weights: number[]): number[]` — returns the array if valid, otherwise throws.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
